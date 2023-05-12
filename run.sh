@@ -19,10 +19,10 @@ gcc \
   platforms/minheadless/common/version.c \
   platforms/minheadless/common/sqEventCommon.c \
   platforms/minheadless/unix/sqUnixHeartbeat.c \
-  platforms/minheadless/unix/sqPlatformSpecific-Unix.c \
   platforms/minheadless/unix/sqUnixCharConv.c \
   platforms/minheadless/unix/sqUnixThreads.c \
-  platforms/minheadless/unix/sqUnixSpurMemory.c \
-  platforms/minheadless/unix/sqUnixMemory.c \
 
 #  platforms/minheadless/unix/aioUnix.c \
+#  platforms/minheadless/unix/sqPlatformSpecific-Unix.c \
+#  platforms/minheadless/unix/sqUnixSpurMemory.c \
+#  platforms/minheadless/unix/sqUnixMemory.c \
