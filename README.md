@@ -5,157 +5,25 @@ See [run.sh](run.sh)
 Work-in-progress...
 
 ```text
-Undefined symbols for architecture x86_64:
-  "_CFRelease", referenced from:
-      _convertChars in sqUnixCharConv-4d9b92.o
-  "_CFStringCreateMutableCopy", referenced from:
-      _convertChars in sqUnixCharConv-4d9b92.o
-  "_CFStringCreateWithBytes", referenced from:
-      _convertChars in sqUnixCharConv-4d9b92.o
-  "_CFStringGetBytes", referenced from:
-      _convertChars in sqUnixCharConv-4d9b92.o
-  "_CFStringGetLength", referenced from:
-      _convertChars in sqUnixCharConv-4d9b92.o
-  "_CFStringNormalize", referenced from:
-      _convertChars in sqUnixCharConv-4d9b92.o
-  "_aioPoll", referenced from:
-      _ioProcessEvents in sqWindow-Dispatch-c1d818.o
-  "_cc_version", referenced from:
-      _getVersionInfo in sqUnixMain-050e15.o
-  "_checkHighPriorityTickees", referenced from:
-      _heartbeat in sqUnixHeartbeat-18179b.o
-  "_clearHeapMap", referenced from:
-      _clearLeakMapAndMapAccessibleObjects in gcc3x-interp-72a103.o
-      _clearLeakMapAndMapAccessibleObjects in interp-e3c5f6.o
-  "_doSignalExternalSemaphores", referenced from:
-      _signalExternalSemaphores in gcc3x-interp-72a103.o
-      _signalExternalSemaphores in interp-e3c5f6.o
-  "_heapMapAtWord", referenced from:
-      _checkHeapIntegrity in gcc3x-interp-72a103.o
-      _checkStackIntegrity in gcc3x-interp-72a103.o
-      _checkOopIntegritynamed in gcc3x-interp-72a103.o
-      _checkHeapIntegrity in interp-e3c5f6.o
-      _checkStackIntegrity in interp-e3c5f6.o
-      _checkOopIntegritynamed in interp-e3c5f6.o
-  "_heapMapAtWordPut", referenced from:
-      _clearLeakMapAndMapAccessibleObjects in gcc3x-interp-72a103.o
-      _clearLeakMapAndMapAccessibleObjects in interp-e3c5f6.o
-  "_ioGetMaxExtSemTableSize", referenced from:
-      _primitiveVMParameter in gcc3x-interp-72a103.o
-      _writeImageFileIO in gcc3x-interp-72a103.o
-      _primitiveVMParameter in interp-e3c5f6.o
-      _writeImageFileIO in interp-e3c5f6.o
-  "_ioInitExternalSemaphores", referenced from:
-      _ioInitThreads in sqUnixThreads-a876b1.o
-  "_ioListBuiltinModule", referenced from:
-      _primitiveListBuiltinModule in gcc3x-interp-72a103.o
-      _primitiveListBuiltinModule in interp-e3c5f6.o
-  "_ioListLoadedModule", referenced from:
-      _primitiveListExternalModule in gcc3x-interp-72a103.o
-      _primitiveListExternalModule in interp-e3c5f6.o
-  "_ioLoadExternalFunctionOfLengthFromModuleOfLength", referenced from:
-      _primitiveDoNamedPrimitiveWithArgs in gcc3x-interp-72a103.o
-      _linkExternalCallerrInto in gcc3x-interp-72a103.o
-      _primitiveDoNamedPrimitiveWithArgs in interp-e3c5f6.o
-      _linkExternalCallerrInto in interp-e3c5f6.o
-  "_ioLoadFunctionFrom", referenced from:
-      _copyBits in gcc3x-interp-72a103.o
-      _copyBitsFromtoat in gcc3x-interp-72a103.o
-      _updateDisplayLeftTopRightBottom in gcc3x-interp-72a103.o
-      _loadBitBltFrom in gcc3x-interp-72a103.o
-      _readImageFromFileHeapSizeStartingAt in gcc3x-interp-72a103.o
-      _primitiveCalloutToFFI in gcc3x-interp-72a103.o
-      _primitiveImageName in gcc3x-interp-72a103.o
-      ...
-  "_ioSetMaxExtSemTableSize", referenced from:
-      _readImageFromFileHeapSizeStartingAt in gcc3x-interp-72a103.o
-      _primitiveVMParameter in gcc3x-interp-72a103.o
-      _readImageFromFileHeapSizeStartingAt in interp-e3c5f6.o
-      _primitiveVMParameter in interp-e3c5f6.o
-      _vm_parseArgument in sqUnixMain-050e15.o
-  "_ioShutdownAllModules", referenced from:
-      _ioExitWithErrorCode in sqUnixMain-050e15.o
-  "_ioSynchronousCheckForEvents", referenced from:
-      _checkForEventsMayContextSwitch in gcc3x-interp-72a103.o
-      _checkForEventsMayContextSwitch in interp-e3c5f6.o
-  "_ioUnloadModuleOfLength", referenced from:
-      _primitiveUnloadModule in gcc3x-interp-72a103.o
-      _primitiveUnloadModule in interp-e3c5f6.o
-  "_ioVMThread", referenced from:
-      _reportStackState in sqUnixMain-050e15.o
-      _sigusr1 in sqUnixMain-050e15.o
-      _osvm_initializeVM in sqVirtualMachineInterface-358139.o
-      _amInVMThread in sqUnixThreads-a876b1.o
-      _ioInitThreads in sqUnixThreads-a876b1.o
-  "_pollpip", referenced from:
-      _vm_parseArgument in sqUnixMain-050e15.o
-  "_printPhaseTime", referenced from:
-      _vm_parseArgument in sqUnixMain-050e15.o
-      _main in sqUnixMain-050e15.o
-      _ioExitWithErrorCode in sqUnixMain-050e15.o
-  "_signalSemaphoreWithIndex", referenced from:
-      _fullGC in gcc3x-interp-72a103.o
-      _incrementalGC in gcc3x-interp-72a103.o
-      _fullGC in interp-e3c5f6.o
-      _incrementalGC in interp-e3c5f6.o
-      _ioSignalInputEvent in sqEventCommon-3fd99e.o
-  "_sqAllocateMemory", referenced from:
-      _readImageFromFileHeapSizeStartingAt in gcc3x-interp-72a103.o
-      _readImageFromFileHeapSizeStartingAt in interp-e3c5f6.o
-  "_sqDebugAnchor", referenced from:
-      _main in sqUnixMain-050e15.o
-  "_sqGetCurrentWorkingDir", referenced from:
-      _osvm_findStartupImage in sqVirtualMachineInterface-358139.o
-  "_sqGetInterpreterProxy", referenced from:
-      _readImageFromFileHeapSizeStartingAt in gcc3x-interp-72a103.o
-      _readImageFromFileHeapSizeStartingAt in interp-e3c5f6.o
-  "_sqGrowMemoryBy", referenced from:
-      _primitiveAllInstances in gcc3x-interp-72a103.o
-      _primitiveAllObjects in gcc3x-interp-72a103.o
-      _fullGC in gcc3x-interp-72a103.o
-      _incrementalGC in gcc3x-interp-72a103.o
-      _sufficientSpaceAfterGC in gcc3x-interp-72a103.o
-      _primitiveAllInstances in interp-e3c5f6.o
-      _primitiveAllObjects in interp-e3c5f6.o
-      ...
-  "_sqMemoryBase", referenced from:
-      _interpret in gcc3x-interp-72a103.o
-      _loadInitialContext in gcc3x-interp-72a103.o
-      _isOopCompiledMethod in gcc3x-interp-72a103.o
-      _methodUsesAlternateBytecodeSet in gcc3x-interp-72a103.o
-      _iframeMethod in gcc3x-interp-72a103.o
-      _possibleRootStoreIntovalue in gcc3x-interp-72a103.o
-      _frameStackedReceiverOffset in gcc3x-interp-72a103.o
-      ...
-  "_sqMemoryExtraBytesLeft", referenced from:
-      _primitiveBytesLeft in gcc3x-interp-72a103.o
-      _primitiveFullGC in gcc3x-interp-72a103.o
-      _primitiveIncrementalGC in gcc3x-interp-72a103.o
-      _primitiveBytesLeft in interp-e3c5f6.o
-      _primitiveFullGC in interp-e3c5f6.o
-      _primitiveIncrementalGC in interp-e3c5f6.o
-  "_sqPathExtractDirname", referenced from:
-      _osvm_loadImage in sqVirtualMachineInterface-358139.o
-  "_sqPathJoin", referenced from:
-      _osvm_findStartupImage in sqVirtualMachineInterface-358139.o
-      _osvm_parseCommandLineArguments in sqVirtualMachineInterface-358139.o
-  "_sqPathMakeAbsolute", referenced from:
-      _osvm_loadImage in sqVirtualMachineInterface-358139.o
-      _osvm_parseCommandLineArguments in sqVirtualMachineInterface-358139.o
-  "_sqShrinkMemoryBy", referenced from:
-      _fullGC in gcc3x-interp-72a103.o
-      _incrementalGC in gcc3x-interp-72a103.o
-      _fullGC in interp-e3c5f6.o
-      _incrementalGC in interp-e3c5f6.o
-  "_sqUTF16ToUTF8New", referenced from:
-      _osvm_utf16ToUt8 in sqVirtualMachineInterface-358139.o
-  "_sqUTF8ToUTF16New", referenced from:
-      _osvm_utf8ToUtf16 in sqVirtualMachineInterface-358139.o
-  "_ux_version", referenced from:
-      _getVersionInfo in sqUnixMain-050e15.o
-  "_vm_date", referenced from:
-      _getVersionInfo in sqUnixMain-050e15.o
-ld: symbol(s) not found for architecture x86_64
+In file included from platforms/unix/vm/sqUnixMain.c:56:
+platforms/unix/vm/include_ucontext.h:110:3: error: need to implement extracting pc from a ucontext_t on
+      this system
+# error need to implement extracting pc from a ucontext_t on this system
+  ^
+platforms/unix/vm/include_ucontext.h:113:3: error: need to implement extracting fp from a ucontext_t on
+      this system
+# error need to implement extracting fp from a ucontext_t on this system
+  ^
+platforms/unix/vm/include_ucontext.h:116:3: error: need to implement extracting sp from a ucontext_t on
+      this system
+# error need to implement extracting sp from a ucontext_t on this system
+  ^
+platforms/unix/vm/sqUnixMain.c:341:9: warning: equality comparison result unused [-Wunused-comparison]
+      0 == getcwd(target, targetSize);
+      ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+platforms/unix/vm/sqUnixMain.c:1127:44: error: no member named '_PC_IN_UCONTEXT' in
+      'struct __darwin_ucontext'
+                primitiveFailForFFIExceptionat(sig, uap->_PC_IN_UCONTEXT);
 ```
 
 The Cog VM source tree
