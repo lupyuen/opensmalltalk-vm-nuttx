@@ -11,3 +11,5 @@
 #define VM_BUILD_STRING "TODO:VM_BUILD_STRING"
 
 #undef __MACH__
+#define __linux__   1
+#define __aarch64__ 1

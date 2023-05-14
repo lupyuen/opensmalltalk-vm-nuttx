@@ -6,24 +6,68 @@ Work-in-progress...
 
 ```text
 In file included from platforms/unix/vm/sqUnixMain.c:56:
-platforms/unix/vm/include_ucontext.h:110:3: error: need to implement extracting pc from a ucontext_t on
-      this system
-# error need to implement extracting pc from a ucontext_t on this system
-  ^
-platforms/unix/vm/include_ucontext.h:113:3: error: need to implement extracting fp from a ucontext_t on
-      this system
-# error need to implement extracting fp from a ucontext_t on this system
-  ^
-platforms/unix/vm/include_ucontext.h:116:3: error: need to implement extracting sp from a ucontext_t on
-      this system
-# error need to implement extracting sp from a ucontext_t on this system
+platforms/unix/vm/include_ucontext.h:15:3: error: Compiler with GNU Extensions required to access register
+      names
+# error Compiler with GNU Extensions required to access register names
   ^
 platforms/unix/vm/sqUnixMain.c:341:9: warning: equality comparison result unused [-Wunused-comparison]
       0 == getcwd(target, targetSize);
       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-platforms/unix/vm/sqUnixMain.c:1127:44: error: no member named '_PC_IN_UCONTEXT' in
-      'struct __darwin_ucontext'
-                primitiveFailForFFIExceptionat(sig, uap->_PC_IN_UCONTEXT);
+platforms/unix/vm/sqUnixMain.c:966:2: error: use of undeclared identifier 'greg_t'
+        greg_t *regs = (greg_t *)&uap->uc_mcontext.gregs;
+        ^
+platforms/unix/vm/sqUnixMain.c:966:10: error: use of undeclared identifier 'regs'
+        greg_t *regs = (greg_t *)&uap->uc_mcontext.gregs;
+                ^
+platforms/unix/vm/sqUnixMain.c:966:26: error: expected expression
+        greg_t *regs = (greg_t *)&uap->uc_mcontext.gregs;
+                                ^
+platforms/unix/vm/sqUnixMain.c:966:18: error: use of undeclared identifier 'greg_t'
+        greg_t *regs = (greg_t *)&uap->uc_mcontext.gregs;
+                        ^
+platforms/unix/vm/sqUnixMain.c:966:44: error: member reference type 'struct __darwin_mcontext64 *' is a
+      pointer; did you mean to use '->'?
+        greg_t *regs = (greg_t *)&uap->uc_mcontext.gregs;
+                                  ~~~~~~~~~~~~~~~~^
+                                                  ->
+platforms/unix/vm/sqUnixMain.c:966:45: error: no member named 'gregs' in 'struct __darwin_mcontext64'
+        greg_t *regs = (greg_t *)&uap->uc_mcontext.gregs;
+                                  ~~~~~~~~~~~~~~~~ ^
+platforms/unix/vm/sqUnixMain.c:973:6: error: use of undeclared identifier 'regs'
+                        v(regs[REG_RAX]),v(regs[REG_RBX]),v(regs[REG_RCX]),v(regs[REG_RDX]),
+                          ^
+platforms/unix/vm/sqUnixMain.c:973:11: error: use of undeclared identifier 'REG_RAX'
+                        v(regs[REG_RAX]),v(regs[REG_RBX]),v(regs[REG_RCX]),v(regs[REG_RDX]),
+                               ^
+platforms/unix/vm/sqUnixMain.c:973:23: error: use of undeclared identifier 'regs'
+                        v(regs[REG_RAX]),v(regs[REG_RBX]),v(regs[REG_RCX]),v(regs[REG_RDX]),
+                                           ^
+platforms/unix/vm/sqUnixMain.c:973:28: error: use of undeclared identifier 'REG_RBX'
+                        v(regs[REG_RAX]),v(regs[REG_RBX]),v(regs[REG_RCX]),v(regs[REG_RDX]),
+                                                ^
+platforms/unix/vm/sqUnixMain.c:973:40: error: use of undeclared identifier 'regs'
+                        v(regs[REG_RAX]),v(regs[REG_RBX]),v(regs[REG_RCX]),v(regs[REG_RDX]),
+                                                            ^
+platforms/unix/vm/sqUnixMain.c:973:45: error: use of undeclared identifier 'REG_RCX'
+                        v(regs[REG_RAX]),v(regs[REG_RBX]),v(regs[REG_RCX]),v(regs[REG_RDX]),
+                                                                 ^
+platforms/unix/vm/sqUnixMain.c:973:57: error: use of undeclared identifier 'regs'
+                        v(regs[REG_RAX]),v(regs[REG_RBX]),v(regs[REG_RCX]),v(regs[REG_RDX]),
+                                                                             ^
+platforms/unix/vm/sqUnixMain.c:973:62: error: use of undeclared identifier 'REG_RDX'
+                        v(regs[REG_RAX]),v(regs[REG_RBX]),v(regs[REG_RCX]),v(regs[REG_RDX]),
+                                                                                  ^
+platforms/unix/vm/sqUnixMain.c:974:6: error: use of undeclared identifier 'regs'
+                        v(regs[REG_RDI]),v(regs[REG_RSI]),v(regs[REG_RBP]),v(regs[REG_RSP]),
+                          ^
+platforms/unix/vm/sqUnixMain.c:974:11: error: use of undeclared identifier 'REG_RDI'
+                        v(regs[REG_RDI]),v(regs[REG_RSI]),v(regs[REG_RBP]),v(regs[REG_RSP]),
+                               ^
+platforms/unix/vm/sqUnixMain.c:974:23: error: use of undeclared identifier 'regs'
+                        v(regs[REG_RDI]),v(regs[REG_RSI]),v(regs[REG_RBP]),v(regs[REG_RSP]),
+                                           ^
+platforms/unix/vm/sqUnixMain.c:974:28: error: use of undeclared identifier 'REG_RSI'
+                        v(regs[REG_RDI]),v(regs[REG_RSI]),v(regs[REG_RBP]),v(regs[REG_RSP]),
 ```
 
 The Cog VM source tree
